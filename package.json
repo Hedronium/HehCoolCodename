@@ -1,0 +1,8 @@
+{
+  "name": "heh-cool-codename",
+  "version": "1.0.0",
+  "main": "heh-cool-codename.js",
+  "repository": "git@github.com:Hedronium/HehCoolCodename.git",
+  "author": "Omran Jamal <o.jamal97@gmail.com>",
+  "license": "MIT"
+}

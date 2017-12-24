@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+fs.readFile('words.csv', 'utf8', (error, txt) => {
+    if (error) {
+        console.log(error);
+        console.log('Error reading data file.');
+        return;
+    }
+
+    const raw = txt.split("\n").map(line => line.split(','));
+    const column_a = raw.map(row => row[0]);
+    const column_b = raw.map(row => row[1]);
+    const data = [column_a, column_b];
+
+    const json_data = JSON.stringify(data);
+
+    fs.readFile('template.js', 'utf8', (error, txt) => {
+        if (error) {
+            console.log(error);
+            console.log('Error reading template.');
+        }
+
+        fs.writeFile('heh-cool-codename.js', txt.replace(
+            '"##--DATA HERE--##"', json_data
+        ), () => {
+            console.log('BUILT.');
+        });
+    });
+});
