@@ -4,5 +4,6 @@
   "main": "heh-cool-codename.js",
   "repository": "git@github.com:Hedronium/HehCoolCodename.git",
   "author": "Omran Jamal <o.jamal97@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "Cool codenames to make you feel cool (and other less important UX reasons)"
 }
