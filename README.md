@@ -1,6 +1,8 @@
 # Heh, Cool Codename.
 > BRUH.
 
+![CodeNames](https://i.imgur.com/39yt3Jn.gif)
+
 We just really like naming our releases cool codenames like "DesertFox" or "AcrticJaguar" or "RushMonkey". So we decided to turn this into a tiny really lame npm module.
 
 It's also super helpful to users when resources have a nice name to be called with by default. Good UX is sexy. (Which actually happens to be the real reason we built this.)
