@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const codename = require('./heh-cool-codename.js');
 const last_arg = parseInt(process.argv[process.argv.length - 1]);
 
