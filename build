@@ -13,7 +13,7 @@ fs.readFile('words.csv', 'utf8', (error, txt) => {
     const column_b = raw.map(row => row[1]);
     const data = [column_a, column_b];
 
-    const json_data = JSON.stringify(data);
+    const json_data = JSON.stringify(data, null, 4);
 
     fs.readFile('template.js', 'utf8', (error, txt) => {
         if (error) {

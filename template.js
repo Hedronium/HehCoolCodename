@@ -1,4 +1,4 @@
-module.exports = (seed) => {
+module.exports = function codename(seed = Math.round(Math.random()*(112**2))) {
     const data = "##--DATA HERE--##";
     const counts = data.map(x => x.length);
     const total = counts.reduce((a, b) => a*b, 1);
@@ -9,9 +9,11 @@ module.exports = (seed) => {
             (acc, cur) => acc.concat(
                 (acc[acc.length - 1] || 1)*cur
             ), []
-        ).map(cumulative => Math.floor(cumulative/target));
+        )
+        .reverse()
+        .slice(1)
+        .map(t => Math.ceil(target/t)-1)
+        .concat(target%counts[counts.length - 1] - 1);
 
     return trickle.map((index, i) => data[i][index]);
 };
-
-console.log(module.exports(7));

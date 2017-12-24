@@ -1,9 +1,24 @@
 {
   "name": "heh-cool-codename",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "heh-cool-codename.js",
   "repository": "git@github.com:Hedronium/HehCoolCodename.git",
-  "author": "Omran Jamal <o.jamal97@gmail.com>",
+  "author": {
+    "email": "o.jamal97@gmail.com",
+    "name": "Omran Jamal",
+    "url": "https://github.com/omranjamal"
+  },
+  "keywords": [
+    "codename",
+    "name",
+    "ux"
+  ],
+  "bin": {
+    "heh-cool-codename": "./cli.js"
+  },
+  "scripts": {
+    "prepublishOnly": "node ./build"
+  },
   "license": "MIT",
   "description": "Cool codenames to make you feel cool (and other less important UX reasons)"
 }
